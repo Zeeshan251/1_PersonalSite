@@ -11,6 +11,7 @@ body{
   padding: 5px 0 5px 10px;
   position: relative;
   padding-top: 100px;
+  overflow: hidden;
 
 }
 p{
@@ -26,6 +27,9 @@ h1{
   font-family: 'Sacramento', cursive;
   color: #66BFBF;
   font-size: 562.5%;
+  animation-name: blink;
+  animation-duration: 2sec;
+  animation-timing-function: ease-in-out;
 }
 
 h2{
@@ -66,12 +70,21 @@ a:hover{
 .top-cloud{
   position: absolute;
   right: 350px;
+  animation-name: oss;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
 }
 
 .bottom-cloud{
   position: absolute;
   left: 300px;
   bottom: 300px;
+  animation-name: move;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .skill-row{
@@ -158,4 +171,29 @@ a:hover{
   background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   text-decoration: none;
+}
+
+@keyframes move{
+  0%{
+      transform: translateX(-450px);
+  }
+  50%{
+    transform : translateX(1280px);
+  }
+  100%{
+    transform : translateX(-450px);
+}
+}
+
+@keyframes oss {
+  0%{
+    transform: translateX(450px);
+  }
+  50%{
+    transform: translateX(-1200px);
+  }
+  100%{
+    transform: translateX(450px);
+  }
+
 }
